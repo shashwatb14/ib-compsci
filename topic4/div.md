@@ -1,6 +1,5 @@
 # `Div`
 
-**Properties**:
 - Represents integer division
 - I.e. how many times one number "fits into" another
 

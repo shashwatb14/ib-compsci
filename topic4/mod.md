@@ -1,6 +1,5 @@
 # `Mod`
 
-**Properties**:
 - Used to find remainder when two integers are divided by each other
 - Used to test for divisibility
 
