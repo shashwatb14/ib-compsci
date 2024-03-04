@@ -37,7 +37,7 @@
     loop while B.hasNext()
         NUM = B.getNext()
         output NUM
-    endloop
+    end loop
 
 ---
 ### <a id="max-and-min"></a>Maximum and minimum in a collection
@@ -51,11 +51,11 @@
         NUM = B.getNext()
         if NUM > MAX then
             MAX = NUM
-        endif
+        end if
         if NUM < MIN then
             MIN = NUM
-        endif
-    endloop
+        end if
+    end loop
 
     output MAX
     output MIN
@@ -71,7 +71,7 @@
     loop while B.hasNext()
         SUM = SUM + B.getNext()
         COUNT = COUNT + 1
-    endloop
+    end loop
 
     output (SUM/COUNT)
 
@@ -87,8 +87,8 @@
         NUM = B.getNext()
         if NUM > 5 and NUM < 8 then
             output NUM
-        endif
-    endloop
+        end if
+    end loop
 
 ---
 ### <a id="common"></a>Find the common elements between collections
@@ -106,9 +106,9 @@
             ES = SPANISH.getNext()
             if FR = ES then
                 output FR
-            endif
-        endloop
-    endloop
+            end if
+        end loop
+    end loop
 
 ---
 ### <a id="arr-collections"></a>Transfer data from arrays to collections
@@ -120,7 +120,7 @@
         CURR_TEMP = TEMPS[I]
         TEMPS_COL.addItem(CURR_TEMP)
         // or TEMPS_COL.addItem(TEMPS[I])
-    endloop
+    end loop
 
 
 ---
@@ -135,4 +135,4 @@
         CURR_TEMP = TEMPS_COL.getNext()
         TEMPS[COUNT] = CURR_TEMP
         COUNT = COUNT + 1
-    endloop
+    end loop

@@ -21,7 +21,7 @@
     // 'for loop'
     loop I from 0 to NUMS.length - 1
         output NUMS[I]
-    endloop
+    end loop
 
 #### With a while loop
 
@@ -34,7 +34,7 @@
         // cannot do J += 1 or J++
         J = J + 1
 
-    endloop
+    end loop
 
 ---
 ### <a id="max-and-min"></a>Maximum and minimum in an array
@@ -50,13 +50,13 @@
 
         if NUMS[I] > MAX then
             MAX = NUMS[I]
-        endif
+        end if
         
         if NUMS[I] < MIN then
             MIN = NUMS[I]
-        endif
+        end if
 
-    endloop
+    end loop
 
     output "The max is: ", MAX
     output "The min is: ", MIN
@@ -69,7 +69,7 @@
 
     loop I from 0 to NUMS.length - 1
         SUM = SUM + NUMS[I]
-    endloop
+    end loop
 
     AVG = SUMS/NUMS.length
 
@@ -86,8 +86,8 @@
     loop I from 0 to NUMS.length - 1
         if NUMS[I] < 0 then
             output NUMS[I]
-        endif
-    endloop
+        end if
+    end loop
 
 #### Between 0 and 15
 
@@ -96,8 +96,8 @@
     loop I from 0 to NUMS.length - 1
         if NUMS[I] > 0 and NUMS[I] < 15 then
             output NUMS[I]
-        endif
-    endloop
+        end if
+    end loop
 
 #### Lesser than 0 and greater than 15 (inclusive)
 
@@ -106,8 +106,8 @@
     loop I from 0 to NUMS.length - 1
         if not (NUMS[I] > 0 and NUMS[I]) < 15 then
             output NUMS[I]
-        endif
-    endloop
+        end if
+    end loop
 
 #### Everything except 9
 
@@ -116,8 +116,8 @@
     loop I from 0 to NUMS.length - 1
         if NUMS[I] != 9 then
             output NUMS[I]
-        endif
-    endloop
+        end if
+    end loop
 
 ---
 ### <a id="common"></a>Find the common elements between arrays
@@ -130,6 +130,6 @@
         loop J from 0 to SPANISH.length - 1
             if FRENCH[I] = SPANISH[J] then
                 output FRENCH[I] // can also output SPANISH[J]
-            endif
-        endloop
-    endloop
+            end if
+        end loop
+    end loop

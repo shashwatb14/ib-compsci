@@ -11,7 +11,7 @@
 
 - Comments must be preceded by double forward slashes `//`
 - Variable names must be capitalized whereas syntax is lowercase (`mod`, `div`, `and`, `or`)
-- Loops and conditional statements must have closing statements, i.e. `endloop` and `endif` respectively
+- Loops and conditional statements must have closing statements, i.e. `end loop` and `end if` respectively
 - Multiple conditions can be achieved through lowercase `and` or `or`
 
 ## Resources

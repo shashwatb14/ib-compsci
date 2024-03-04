@@ -6,11 +6,10 @@
     input CENTS
 
     // validation
-
     loop while CENTS > 99 or CENTS < 0
         output "Enter a valid number of cents"
         input CENTS
-    endloop
+    end loop
 
     QUARTERS = CENTS div 25 // 1
     REMAINING = CENTS mod 25 // 11

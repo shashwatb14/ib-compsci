@@ -21,7 +21,7 @@
         output "Is divisible by 3"
     else
         output "Not divisible by 3"
-    endif
+    end if
 
 #### Example inputs and outputs
 
