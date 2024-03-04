@@ -8,6 +8,7 @@
 
     25 mod 6 = 1
     36 mod 8 = 4
+    3 mod 28 = 3
 
 ## Basic example programs
 - [Divisible by 3](#three-divisibility)
