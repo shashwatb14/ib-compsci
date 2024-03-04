@@ -10,7 +10,7 @@
 ## Convetions
 
 - Comments must be preceded by double forward slashes `//`
-- Variable names must be capitalized
+- Variable names must be capitalized whereas syntax is lowercase (`mod`, `div`, `and`, `or`)
 - Loops and conditional statements must have closing statements, i.e. `endloop` and `endif` respectively
 - Multiple conditions can be achieved through lowercase `and` or `or`
 
