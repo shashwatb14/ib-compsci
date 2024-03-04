@@ -13,7 +13,7 @@
 - [Find common elements](#common)
 
 ---
-### <a id="iteration"></a>Array iteration
+### <a id="iteration"></a>Iterate through an array
 #### With a 'for loop'
 
     NUMS[8]
@@ -38,31 +38,27 @@
 
 ---
 ### <a id="max-and-min"></a>Maximum and minimum in an array
-#### Maximum
 
     NUMS = [5, 9, -1, 12, 13, 51, -6]
     MAX = NUMS[0]
+    MIN = NUMS[0]
 
     // loop can start from 1 since MAX is NUMS[0]
     loop I from 0 to NUMS.length - 1
+
+        // MAX and MIN have different values which requires two different conditions
+
         if NUMS[I] > MAX then
             MAX = NUMS[I]
         endif
-    endloop
-
-    output "The max is: ", MAX
-
-#### Minimum
-    NUMS = [5, 9, -1, 12, 13, 51, -6]
-    MIN = NUMS[0]
-
-    // loop can start from 1 since MIN is NUMS[0]
-    loop I from 0 to NUMS.length - 1
+        
         if NUMS[I] < MIN then
             MIN = NUMS[I]
         endif
+
     endloop
 
+    output "The max is: ", MAX
     output "The min is: ", MIN
 
 ---
@@ -132,7 +128,7 @@
     // nested loops
     loop I from 0 to FRENCH.length - 1
         loop J from 0 to SPANISH.length - 1
-            if FRENCH[I] == SPANISH[J] then
+            if FRENCH[I] = SPANISH[J] then
                 output FRENCH[I] // can also output SPANISH[J]
             endif
         endloop
