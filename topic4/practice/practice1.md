@@ -7,7 +7,7 @@
 
     // validation
 
-    loop while CENTS > 99
+    loop while CENTS > 99 or CENTS < 0
         output "Enter a valid number of cents"
         input CENTS
     endloop
