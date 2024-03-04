@@ -28,7 +28,7 @@
     NUMS[8]
     J = 0
 
-    loop  while J < NUMS.length - 1
+    loop while J < NUMS.length - 1
         output NUMS[J]
 
         // cannot do J += 1 or J++
