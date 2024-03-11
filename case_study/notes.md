@@ -4,7 +4,20 @@
 - [Actual case study](./rescue_robots.pdf)
 - [Computer Science wiki for vocabulary](https://computersciencewiki.org/index.php?title=2024_case_study)
 
-## Scenario
+## Overview
+
+1. [Scenario](#scenario)
+2. [Problems to be addressed](#problems)
+3. [Technologies](#tech)
+    1. [Computer vision](#cv)
+        1. [Visual simultaneous localization and mapping (vSLAM)](#vslam)
+        2. [Pose estimation](#pose-estimation)
+4. [Social and ethical issues](#issues)
+5. [Further research](#research)
+6. [Challenges faced](#challenges)
+7. [Additional terminology](#terms)
+
+## <a id="scenario"></a> Scenario
 
 - **BotPro**:
     - Company that makes robots for various industrial applications
@@ -25,7 +38,7 @@
     - Factories were also an **unknown environement** to the robot
     - Damage caused meant that the **layout of the factories was different to any floor plans that existed**
 
-## Problems to be addressed
+## <a id="problems"></a> Problems to be addressed
 
 - Redesgining of robot with the capability to **explore**, **map**, and **survey the interior of unknown and damaged buildings**
 
@@ -36,21 +49,24 @@
 3. `Finding survivors`: robot required to **detect debris and humans under different light conditions**, deal with **`occlusion` by objects**, and **recognize deformed shapes**
 4. `Communication`: robots must **communicate with rescue team outside the damaged space**. Robot may need to rely on **large databases** and the **processing power of central computers**
 
-## Technologies
+## <a id="tech"></a> Technologies
 
-## Computer vision
+### <a id="cv"></a> Computer vision
+---
 
-## Visual simultaneous localization and mapping (vSLAM)
+#### <a id="vslam"></a> Visual simultaneous localization and mapping (vSLAM)
+---
 
-## Pose estimation
+#### <a id="pose-estimation"></a> Pose estimation
+---
 
-## Social and ethical issues
+## <a id="issues"></a> Social and ethical issues
 
-## Further research
+## <a id="research"></a> Further research
 
-## Challenges faced
+## <a id="challenges"></a> Challenges faced
 
-## Additional terminology
+## <a id="terms"></a> Additional terminology
 
 - `Bundle adjustment`
 - `Computer vision`
