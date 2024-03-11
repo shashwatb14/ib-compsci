@@ -33,7 +33,7 @@
 
 - However, operation was successful when deployed in a stadium after strucutural damage
 
-- Root cause was the accuracy and difference  of the `global positioning system (GPS) signal` inside the factories
+- Root cause was the accuracy and difference  of the [`global positioning system (GPS) signal`](#gps) inside the factories
     - Strength of the satellite signal received was **insufficient**, resulting in errors in calculating robot's exact location
     - Factories were also an **unknown environement** to the robot
     - Damage caused meant that the **layout of the factories was different to any floor plans that existed**
@@ -44,12 +44,20 @@
 
 - Must be **cost effective** and focus on the new design was on **building efficient algorithms** to **improve robot performance** and not on the mechanical components
 
-1. `Accurate mapping of the area`: robot needs to find its way inside buildings and reliably operate in a `GPS-degraded environment` or `GPS-denied environment` and **in the absence of an exact map**
+1. `Accurate mapping of the area`: robot needs to find its way inside buildings and reliably operate in a [`GPS-degraded environment`](#gps-degraded) or [`GPS-denied environment`](#gps-denied) and **in the absence of an exact map**
 2. `Navigation in a dynamic and unknown enviroment`: robot has to **navigate in an unknown environment** where structures may have been **damaged and changed due to the disaster**
-3. `Finding survivors`: robot required to **detect debris and humans under different light conditions**, deal with **`occlusion` by objects**, and **recognize deformed shapes**
+3. `Finding survivors`: robot required to **detect debris and humans under different light conditions**, deal with **[`occlusion`](#occlusion) by objects**, and **recognize deformed shapes**
 4. `Communication`: robots must **communicate with rescue team outside the damaged space**. Robot may need to rely on **large databases** and the **processing power of central computers**
 
 ## <a id="tech"></a> Technologies
+
+- In order to move around the **environment successfully**, the robot needs a **map**
+
+- [`GPS signals`](#gps) usually used for **navigation in open spaces** since received **signals are accurate**, unlike for indoor spaces
+
+- Hence, the design team at *BotPro* needs to create a **visual situational awareness** and are looking at **[`computer vision`](#computer-vision) techniques** to allow the robot to **produce a map of its surroundings** and **recognize objects not seen before**
+
+- Robot must be equipped with an [`odometry sensor`](#odometry-sensor) and a single **camera** at the most basic level
 
 ### <a id="cv"></a> Computer vision
 ---
@@ -68,32 +76,32 @@
 
 ## <a id="terms"></a> Additional terminology
 
-- `Bundle adjustment`
-- `Computer vision`
-- `Dead reckoning data`
-- `Edge computing`
-- `Global map optimization`
-- `Global positioning system (GPS) signal`
-- `GPS-degraded environment`
-- `GPS-denied environment`
-- `Human pose estimation (HPE)`
-- `Inertial measurement unit (IMU)`
-- `Keyframe selection`
-- `Key points/pairs`
-- `Light detection and ranging (LIDAR)`
-- `Object occlusion`
-- `Odometry sensor`
-- `Optimization`
-- `Relocalization`
-- `Rigid pose estimation (RPE)`
-- `Robot drift`
-- `Simultaneous localization and mapping (SLAM)`
-- `Sensor fusion model`
-- `Visual simultaneous localization and mapping (vSLAM) modules`:
-    - `Initilization`
-    - `Local mapping`
-    - `Loop closure`
-    - `Relocalization`
-    - `Tracking`
+- <a id="bundle-adjustment">`Bundle adjustment`</a>
+- <a id="computer-vision">`Computer vision`</a>
+- <a id="dead-reckoning-data">`Dead reckoning data`</a>
+- <a id="edge-computing">`Edge computing`</a>
+- <a id="global-map-optimization">`Global map optimization`</a>
+- <a id="gps">`Global positioning system (GPS) signal`</a>
+- <a id="gps-degraded">`GPS-degraded environment`</a>
+- <a id="gps-denied">`GPS-denied environment`</a>
+- <a id="hpe">`Human pose estimation (HPE)`</a>
+- <a id="imu">`Inertial measurement unit (IMU)`</a>
+- <a id="keyframe-selection">`Keyframe selection`</a>
+- <a id="key-points">`Key points/pairs`</a>
+- <a id="lidar">`Light detection and ranging (LIDAR)`</a>
+- <a id="occlusion">`Object occlusion`</a>
+- <a id="odometry-sensor">`Odometry sensor`</a>
+- <a id="optimization">`Optimization`</a>
+- <a id="relocalization">`Relocalization`</a>
+- <a id="rpe">`Rigid pose estimation (RPE)`</a>
+- <a id="robot-drift">`Robot drift`</a>
+- <a id="slam">`Simultaneous localization and mapping (SLAM)`</a>
+- <a id="sensor-fusion-model">`Sensor fusion model`</a>
+- <a id="vslam">`Visual simultaneous localization and mapping (vSLAM) modules`:</a>
+    - <a id="initialization">`Initialization`</a>
+    - <a id="local-mapping">`Local mapping`</a>
+    - <a id="loop-closure">`Loop closure`</a>
+    - <a id="relocalization">`Relocalization`</a>
+    - <a id="tracking">`Tracking`</a>
 
 
