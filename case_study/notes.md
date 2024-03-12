@@ -62,8 +62,38 @@
 ### <a id="cv"></a> Computer vision
 ---
 
+- Refers to technologies that allow a device to **"see"**, i.e., **sense the environment around it**, including both **static** and **dynamic objects**
+
+- Two subdomains of [`computer vision`](#computer-vision) being explored include:
+    - [`Visual simultaneous localization and mapping (vSLAM)`](#vslam)
+    - [`Pose estimation`](#pose-estimation)
+
 #### <a id="vslam"></a> Visual simultaneous localization and mapping (vSLAM)
 ---
+
+- [`Simultaneous localization and mapping (SLAM)`](#slam) is used for **estimating sensor motion** and **reconstructing the structure of an unknown environment**
+
+- [`SLAM`](#slam) can be performed using different types of **sensors** including:
+    - cameras for **visual data** collection
+    - radar
+    - sonar
+    - [`light detection and ranging (LIDAR)`](#lidar) for **non-visible data**
+    - [`inertial measurement unit (IMU)`](#imu) for **basic positional data**
+
+- [`IMU`](#imu) is a **combination of sensors**, such as an `accelerometer`, `gyroscope`, and `magnetometer`, that **capture the data about a device's location** in a **three-dimensional (3D) space**
+
+- Installing an [`IMU`](#imu) on the robot will allow it to measure its **translational and rotational movements**
+
+- [`SLAM`](#slam) techniques that use a **camera as the basic visual input** are know as [`vSLAM`](#visual-slam) or [`visual SLAM`](#visual-slam)
+
+- [`vSLAM`](#visual-slam) algorithms will allow the robot to **dynamically build a map** while **keeping track of its own location and orientation** as it moves around an **unknown environment**
+
+- The objective is to **combine** the [`dead reckoning data`](#dead-reckoning-data) provided by the [`odometry sensor`](#odometry-sensor) and **images from the camera** as an **input** to undertake `localization` and **map building**
+
+- [`vSLAM`](#visual-slam) works indoor and provides greater accuracy than [`GPS`](#gps) (advantage)
+
+![vSLAM process chart](./img/fig1.png)
+
 
 #### <a id="pose-estimation"></a> Pose estimation
 ---
@@ -97,7 +127,7 @@
 - <a id="robot-drift">`Robot drift`</a>
 - <a id="slam">`Simultaneous localization and mapping (SLAM)`</a>
 - <a id="sensor-fusion-model">`Sensor fusion model`</a>
-- <a id="vslam">`Visual simultaneous localization and mapping (vSLAM) modules`:</a>
+- <a id="visual-slam">`Visual simultaneous localization and mapping (vSLAM) modules`:</a>
     - <a id="initialization">`Initialization`</a>
     - <a id="local-mapping">`Local mapping`</a>
     - <a id="loop-closure">`Loop closure`</a>
