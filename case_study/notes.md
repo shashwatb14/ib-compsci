@@ -71,7 +71,7 @@
 #### <a id="vslam"></a> Visual simultaneous localization and mapping (vSLAM)
 ---
 
-- [*`Simultaneous localization and mapping (SLAM)`*](#slam) is used for **estimating sensor motion** and **reconstructing the structure of an unknown environment**
+> [*`Simultaneous localization and mapping (SLAM)`*](#slam) is used for estimating sensor motion and reconstructing the structure of an unknown environment
 
 - [`SLAM`](#slam) can be performed using different types of **sensors** including:
     - cameras for **visual data** collection
@@ -84,7 +84,7 @@
 
 - Installing an [`IMU`](#imu) on the robot will allow it to measure its **translational and rotational movements**
 
-- [`SLAM`](#slam) techniques that use a **camera as the basic visual input** are know as [`vSLAM`](#visual-slam) or [`visual SLAM`](#visual-slam)
+> [`SLAM`](#slam) techniques that use a camera as the basic visual input are know as [`vSLAM`](#visual-slam) or [`visual SLAM`](#visual-slam)
 
 - [`vSLAM`](#visual-slam) algorithms will allow the robot to **dynamically build a map** while **keeping track of its own location and orientation** as it moves around an **unknown environment**
 
@@ -124,11 +124,18 @@
 
 - Design team are also exploring using **multiple cameras** in the new robot
 
-
 - If implemented, a **different image acquisition scheme** may be used to **optimize the use of visual information**
 
 #### <a id="pose-estimation"></a> Pose estimation
 ---
+
+- Robot needs to know the **pose of a person** to perform **correct operations** and needs to **estimate the configuration of human body parts**
+
+> [`Pose estimation`](#pose-estimation) refers to the [`computer vision`](#computer-vision) technologies of estimating the position and orientation of an object or a human relative to the camera in a real-world space
+
+- Usually done by **identifying**, **locating**, and **tracking** a number of [*`key points`*](#key-points) on an **object** or a **human** in an **interactive environment**
+
+> [`Key points`](#key-points) are spatial locations or points in an image that define what stands out in the image captured
 
 ## <a id="issues"></a> Social and ethical issues
 
