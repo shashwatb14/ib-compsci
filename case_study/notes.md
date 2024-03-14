@@ -184,9 +184,48 @@
 
 ## <a id="issues"></a> Social and ethical issues
 
+- Advantages:
+    - Sent to places that are too **dangerous for human rescue workers**
+    - Designed to assist humans, saving human rescue workers from **exhaustion and trauma**
+    - Robots can **gather feedback** from **mock deployments** that can be used to **train human rescue workers** about **safety and efficiency** in disaster management teams
+
+- However, robots **require large amounts of resources to build and maintain**, yet they may have **limited capability**
+
+- Hence, only **economically developed countries** can **afford to spend time and money** on building and using them
+
+- **Questions** regarding **social and ethical aspects** of using rescue robots:
+
+    > Should rescue robots be used to perform tasks that would be too dangerous for humans in a disaster or similarly unstable environment?
+
+    > Are robots safe? Who is accountable if a rescue robot causes harm to the person in need of help due to a miscalculation of the person's pose?
+
+    > Will survivors be comfortble being helped by a robot and not another compassionate human being?
+
 ## <a id="research"></a> Further research
 
+- [*`Sensor fusion models`*](#sensor-fusion-model) can be used in the future to provide **greater confidence and accuracy**
+
+- Making **multiple robots** that can work **collaboratively** will require the company to identify the **algorithms** that can be used to enable **collaboration** not just **between robots** but also with their **human operators**
+
+- Technologies like `intelligent network infrastructure` that can be **dynamically enhanced and extended** by `edge nodes` could serve as the **backbone**
+
+- The ability to be **connected in any place and at any time** would allow a necessary **level of autonomy** and **collective exchange of information** among robots, humans, infrastructure and related applications
+
+- However, this could require more **advanced [`edge computing`](#edge-computing)** and **distributed `machine learning`**
+
+- Building a rescuer `graphical user interface (GUI)` that could **map a disaster zone** in **real time** to prepare the human rescue team if they wanted to enter the zone
+
 ## <a id="challenges"></a> Challenges faced
+
+> Understanding how vSLAM navigates an environment with unknown obstacles and contours
+
+> Minimizing the time rescue robots spend scanning and learning an environment
+
+> Estimating the pose of people despite varying light and environment conditions and body-part or multiple-object occlusion
+
+> Updaing existing maps in a dynamically changing environment, such as an earthquake where rubble is still shifting
+
+> Developing an understanding of the ethical considerations of using autonomous robots in life-and-death situations
 
 ## <a id="terms"></a> Additional terminology
 
