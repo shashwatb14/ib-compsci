@@ -33,7 +33,7 @@
 
 - However, operation was successful when deployed in a stadium after strucutural damage
 
-- Root cause was the accuracy and difference  of the [`global positioning system (GPS) signal`](#gps) inside the factories
+- Root cause was the accuracy and difference  of the [*`global positioning system (GPS) signal`*](#gps) inside the factories
     - Strength of the satellite signal received was **insufficient**, resulting in errors in calculating robot's exact location
     - Factories were also an **unknown environement** to the robot
     - Damage caused meant that the **layout of the factories was different to any floor plans that existed**
@@ -44,7 +44,7 @@
 
 - Must be **cost effective** and focus on the new design was on **building efficient algorithms** to **improve robot performance** and not on the mechanical components
 
-1. `Accurate mapping of the area`: robot needs to find its way inside buildings and reliably operate in a [`GPS-degraded environment`](#gps-degraded) or [`GPS-denied environment`](#gps-denied) and **in the absence of an exact map**
+1. `Accurate mapping of the area`: robot needs to find its way inside buildings and reliably operate in a [*`GPS-degraded environment`*](#gps-degraded) or [*`GPS-denied environment`*](#gps-denied) and **in the absence of an exact map**
 2. `Navigation in a dynamic and unknown enviroment`: robot has to **navigate in an unknown environment** where structures may have been **damaged and changed due to the disaster**
 3. `Finding survivors`: robot required to **detect debris and humans under different light conditions**, deal with **[`occlusion`](#occlusion) by objects**, and **recognize deformed shapes**
 4. `Communication`: robots must **communicate with rescue team outside the damaged space**. Robot may need to rely on **large databases** and the **processing power of central computers**
@@ -55,9 +55,9 @@
 
 - [`GPS signals`](#gps) usually used for **navigation in open spaces** since received **signals are accurate**, unlike for indoor spaces
 
-- Hence, the design team at *BotPro* needs to create a **visual situational awareness** and are looking at **[`computer vision`](#computer-vision) techniques** to allow the robot to **produce a map of its surroundings** and **recognize objects not seen before**
+- Hence, the design team at *BotPro* needs to create a **visual situational awareness** and are looking at **[*`computer vision`*](#computer-vision) techniques** to allow the robot to **produce a map of its surroundings** and **recognize objects not seen before**
 
-- Robot must be equipped with an [`odometry sensor`](#odometry-sensor) and a single **camera** at the most basic level
+- Robot must be equipped with an [*`odometry sensor`*](#odometry-sensor) and a single **camera** at the most basic level
 
 ### <a id="cv"></a> Computer vision
 ---
@@ -65,20 +65,20 @@
 - Refers to technologies that allow a device to **"see"**, i.e., **sense the environment around it**, including both **static** and **dynamic objects**
 
 - Two subdomains of [`computer vision`](#computer-vision) being explored include:
-    - [`Visual simultaneous localization and mapping (vSLAM)`](#vslam)
+    - [*`Visual simultaneous localization and mapping (vSLAM)`*](#vslam)
     - [`Pose estimation`](#pose-estimation)
 
 #### <a id="vslam"></a> Visual simultaneous localization and mapping (vSLAM)
 ---
 
-- [`Simultaneous localization and mapping (SLAM)`](#slam) is used for **estimating sensor motion** and **reconstructing the structure of an unknown environment**
+- [*`Simultaneous localization and mapping (SLAM)`*](#slam) is used for **estimating sensor motion** and **reconstructing the structure of an unknown environment**
 
 - [`SLAM`](#slam) can be performed using different types of **sensors** including:
     - cameras for **visual data** collection
     - radar
     - sonar
-    - [`light detection and ranging (LIDAR)`](#lidar) for **non-visible data**
-    - [`inertial measurement unit (IMU)`](#imu) for **basic positional data**
+    - [*`light detection and ranging (LIDAR)`*](#lidar) for **non-visible data**
+    - [*`inertial measurement unit (IMU)`*](#imu) for **basic positional data**
 
 - [`IMU`](#imu) is a **combination of sensors**, such as an `accelerometer`, `gyroscope`, and `magnetometer`, that **capture the data about a device's location** in a **three-dimensional (3D) space**
 
@@ -88,16 +88,16 @@
 
 - [`vSLAM`](#visual-slam) algorithms will allow the robot to **dynamically build a map** while **keeping track of its own location and orientation** as it moves around an **unknown environment**
 
-- The objective is to **combine** the [`dead reckoning data`](#dead-reckoning-data) provided by the [`odometry sensor`](#odometry-sensor) and **images from the camera** as an **input** to undertake `localization` and **map building**
+- The objective is to **combine** the [*`dead reckoning data`*](#dead-reckoning-data) provided by the [`odometry sensor`](#odometry-sensor) and **images from the camera** as an **input** to undertake `localization` and **map building**
 
 - [`vSLAM`](#visual-slam) works indoor and provides greater accuracy than [`GPS`](#gps) (advantage)
 
 ![vSLAM process chart](./img/fig1.png)
 
 - [`vSLAM`](#visual-slam) algorithm has a number of **modules**, the *three* main ones being:
-    - `tracking`
-    - `local mapping`
-    - `loop closure`
+    - [*`tracking`*](#tracking)
+    - [*`local mapping`*](#local-mapping)
+    - [*`loop closure`*](#loop-closure)
 
 ![The three main modules of the vSLAM algorithm](./img/fig2.png)
 
@@ -110,9 +110,22 @@
 
 - **Balance** is needed between the `efficiency of the optimizing algorithms` and the `accuracy of the created map`
 
-- Two techniques used for [`optimization`](#optimization) are [`bundle adjustment`](#bundle-adjustment) and [`keyframe selection`](#keyframe-selection)
+- Two techniques used for [*`optimization`*](#optimization) are [*`bundle adjustment`*](#bundle-adjustment) and [*`keyframe selection`*](#keyframe-selection)
 
-<p style="text-align: center"><img src="./img/fig3.png" width="50%" alt="Flowchart of a typical vSLAM process"></p>
+<p align="center"><img src="./img/fig3.png" width="50%" alt="Flowchart of a typical vSLAM process"></p>
+
+- When [`tracking`](#tracking) fails, [`vSLAM`](#visual-slam) executes a model for [*`relocalization`*](#relocalization) since the robot needs to **relocalize** itself
+
+- As the robot moves through a space, it may [`drift`](#robot-drift) and **lose itself** at which point [*`global map optimization`*](#global-map-optimization) (using a [`loop closure`](#loop-closure) technique) is executed
+
+- [`vSLAM`](#visual-slam) is a **low-cost** and **robust** algorithm that can handle **dynamic changes in the environment**
+
+- Need to know the **performance**, **advantages**, and **limitations** of the [`vSLAM`](#visual-slam) algorithm
+
+- Design team are also exploring using **multiple cameras** in the new robot
+
+
+- If implemented, a **different image acquisition scheme** may be used to **optimize the use of visual information**
 
 #### <a id="pose-estimation"></a> Pose estimation
 ---
