@@ -80,7 +80,7 @@
     - [*`light detection and ranging (LIDAR)`*](#lidar) for **non-visible data**
     - [*`inertial measurement unit (IMU)`*](#imu) for **basic positional data**
 
-- [`IMU`](#imu) is a **combination of sensors**, such as an `accelerometer`, `gyroscope`, and `magnetometer`, that **capture the data about a device's location** in a **three-dimensional (3D) space**
+> [`IMU`](#imu) is a combination of sensors, such as an `accelerometer`, `gyroscope`, and `magnetometer`, that capture the data about a device's location in a three-dimensional (3D) space
 
 - Installing an [`IMU`](#imu) on the robot will allow it to measure its **translational and rotational movements**
 
@@ -136,6 +136,51 @@
 - Usually done by **identifying**, **locating**, and **tracking** a number of [*`key points`*](#key-points) on an **object** or a **human** in an **interactive environment**
 
 > [`Key points`](#key-points) are spatial locations or points in an image that define what stands out in the image captured
+
+- Inanimate objects are **rigid**, so their [`key points`](#key-points) include **corners**, **edges**, or other significant features
+
+> Models used to identify [`key points`](#key-points) on inanimate objects are called [*`rigid pose estimation (RPE)`*](#rpe) models
+
+- [`Key points`](#key-points) for humans include the **head** and other **major joints** such as the neck, shoulders, elbows, wrists, and knees
+
+> Models used to identify [`key points`](#key-points) on humans are called [*`human pose estimation (HPE)`*](#hpe) models
+
+<p align="center"><img src="./img/fig4.png" width="50%" alt="A kinematic representation of a human body"></p>
+
+- [`Key points`](#key-points) used to describe **pose of human** in **two dimensions**
+
+> A valid connection between points is known as a [`pair`](#key-points)
+
+- This `two-dimensional (2D)` image of [`key points`](#key-points) and [`pairs`](#key-points) is transformed into a **3D pose model** that enables the **prediction of the accurate positioning** of a person
+
+> **Note**: [`HPE`](#hpe) does not recognize who is in the image; it only **estimates the body parts**
+
+![3D human pose estimation](./img/fig5.png)
+
+- [`HPE`](#hpe) classified into:
+    - `Bottom-up` methods
+    - `Top-down` methods
+
+- [`HPE`](#hpe) methods differ based on **number of people being tracked**
+
+- `Single-person pose estimation` easier than `multiple-person pose estimation`
+
+- Robot with highly **accurate** image of people:
+    - Increase in `computational complexity` &rarr; Increase in `inference delay` in **real-time rescue operations**
+
+- **Challenges** faced by `pose-tracking` algorithms:
+    - **Background scene handling**
+    - [`Self-occlusion`](#occlusion) of **body parts**
+    - `Tracking` in **diverse light conditions**
+    - [*`Multiple-object occlusion`*](#occlusion)
+
+- Robots must undertake `pose estimation` in **real time**, with or without **internet connectivity**, so the design team might consider using **lightweight edge devices** that implement [*`edge computing`*](#edge-computing)
+
+- Challenging for robots to work with **low-power devices**
+
+- Robot also needs `two-way communication` with the **human rescue team**
+
+- Design team aware that **access to data/images** sent by the rescue robot should be **limited to authorized persons** to maintain the **security and privacy of data**
 
 ## <a id="issues"></a> Social and ethical issues
 
