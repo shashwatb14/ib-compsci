@@ -112,7 +112,7 @@
 
 - Two techniques used for [`optimization`](#optimization) are [`bundle adjustment`](#bundle-adjustment) and [`keyframe selection`](#keyframe-selection)
 
-<center><img src="./img/fig3.png" width="50%" alt="Flowchart of a typical vSLAM process"></center>
+<p style="text-align: center"><img src="./img/fig3.png" width="50%" alt="Flowchart of a typical vSLAM process"></p>
 
 #### <a id="pose-estimation"></a> Pose estimation
 ---
