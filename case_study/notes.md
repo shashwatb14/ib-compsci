@@ -24,7 +24,7 @@
     - Focus shifted to making **rescue robots**
 
 - **Rescue robots**:
-    - Designed to help with the search and rescue of humans after a **disaster** (like earthquakes and tsunamis)
+    - Designed to help with the search and rescue of humans after a **disaster** (earthquakes and tsunamis)
     - Assist the efforts of rescue teams by **searching** and **mapping** areas, assessing damage, removing debris, delivering supplies, and evacuating casualties
 
 - Found to perform below expectations when sent into a large factory after a fire and another factory that was damaged by an earthquake
@@ -94,6 +94,25 @@
 
 ![vSLAM process chart](./img/fig1.png)
 
+- [`vSLAM`](#visual-slam) algorithm has a number of **modules**, the *three* main ones being:
+    - `tracking`
+    - `local mapping`
+    - `loop closure`
+
+![The three main modules of the vSLAM algorithm](./img/fig2.png)
+
+- Robot uses the ***three* main modules** of the [`vSLAM`](#visual-slam) algorithm to:
+    - [`initialize`](#initialization) its position according to the available data
+    - [`track`](#tracking) its progress while analyzing new sensor data
+    - **create a map** of the environment
+
+- As the measurement of features (doors, wall corners, location/pose of people in damaged structure) *increases* over time, the **environment representation** needs to be **optimized**, which requires significant **computational processing capabilites** (**Figure 3**)
+
+- **Balance** is needed between the `efficiency of the optimizing algorithms` and the `accuracy of the created map`
+
+- Two techniques used for [`optimization`](#optimization) are [`bundle adjustment`](#bundle-adjustment) and [`keyframe selection`](#keyframe-selection)
+
+<center><img src="./img/fig3.png" width="50%" alt="Flowchart of a typical vSLAM process"></center>
 
 #### <a id="pose-estimation"></a> Pose estimation
 ---
